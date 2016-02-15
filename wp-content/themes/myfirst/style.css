@@ -1,0 +1,78 @@
+/*
+Theme Name: Simplest Site
+Author: Sam Gold
+Description: The 2014 simplest theme for WordPress.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black
+Text Domain: simplest-site
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body {
+	background-color: #000;
+	min-width: 600px;
+}
+a {
+	color: #199999;
+}
+a:hover {
+	color: red;
+}
+.site {
+	background-color: #eee;
+	border: 3px double #fff;
+	margin: 20px auto;
+	width: 90%;
+}
+.site-title {
+	border-bottom: 1px solid #555;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.search-box {
+	border-bottom: 1px solid #555;
+	padding-bottom: 20px;
+}
+#masthead {
+	background-color: #111;
+	border-right: 1px solid #000;
+	color: #ddd;
+	display: inline-block;
+	float: left;
+	margin: 0 auto;
+	width: 300px;
+}
+#masthead a {
+	color: #fff;
+}
+#masthead a:hover {
+	color: #bbb;
+}
+#colophon {
+	background-color: #000;
+	display: block;
+	padding: 20px;
+	text-align: center;
+}	
+.site-content {
+	border: none;
+	margin-left: 300px;
+	padding: 20px;
+}
+.clear {
+	clear: both;
+}
+.nav-previous {
+	float: left;
+	padding: 10px 0;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	padding: 10px 0;
+	text-align: right;
+	width: 50%;
+}
