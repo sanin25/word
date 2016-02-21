@@ -7,10 +7,11 @@
  * @subpackage clean
  */
 get_header(); // Подключаем хедер?> 
-<div class="single">
+<div class="centeritem table-cell" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
-<h1><?php the_title(); // Заголовок ?></h1>
-<?php the_content(); // Содержимое страницы ?>
+<h1><?php the_title();// Заголовок ?></h1>
+<hr>
+ <?php the_content(); // Содержимое страницы ?>
 <?php echo 'Рубрики: '; the_category( ' | ' ); // Выводим категории поста ?>
 <?php the_tags( 'Тэги: ', ' | ', '' ); // Выводим тэги(метки) поста ?>
 <?php endwhile; // Конец цикла ?>
@@ -18,6 +19,11 @@ get_header(); // Подключаем хедер?>
 <?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); // Ссылка на следующий пост?> 
 <hr>
 <?php comments_template( '', true ); // Комментарии ?>
+</div>
+<div class="divmenuright table-cell">
+<div class="cont">
+	<?php get_template_part( 'inc/contact' ); ?>
+</div>
 </div>
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

@@ -7,16 +7,20 @@
  * @subpackage clean
  */
 
-	wp_footer(); // Необходимо для нормальной работы плагинов
+	?>
+<?php wp_footer(); // Необходимо для нормальной работы плагинов
 ?>
-
-
-  
- <div class=" myfooter">
- <?php $header_image = get_theme_mod('header_image',get_stylesheet_directory_uri().'/img/footer.png');
- 		echo '<img src="'.esc_url( $header_image ).'"  >';
- ?>
+	<!-- Конец класса Table-row--> 
  </div>
+ 	<!-- Конец класса Table--> 
+ </div>
+	<!-- Конец класса Shell --> 
+ </div>
+<!-- крнец wrapper -->
+  </div>
  
+ <div class=" myfooter">
+ 	<img src="<?php echo get_stylesheet_directory_uri() ?>/img/footer.png" alt=" Эко ферма футер" title=""/>
+ </div>
 </body>
 </html>

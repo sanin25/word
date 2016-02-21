@@ -23,7 +23,7 @@ get_header(); // Подключаем хедер ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><!-- Заголовок поста + ссылка на него -->
 <?php the_time('F j, Y'); // Дата создания поста?>
-<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } // Проверяем наличие миниатюры, если есть показываем ?>
+
 <?php the_content(''); // Выводим анонс ?>
 <?php endwhile; // Конец цикла.
 else: echo '<h2>Извините, ничего не найдено...</h2>'; endif; // Если записей нет - извиняемся ?>	 

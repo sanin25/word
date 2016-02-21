@@ -19,7 +19,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 3.0, user-scalable = yes, width = device-width">
+
 	
 
 
@@ -45,27 +46,35 @@ if ( $paged >= 2 || $page >= 2 )
 <body>
 	<div class="shell">
 		
-					<div class="header">
-						<?  $header_image = get_theme_mod('header_image',get_stylesheet_directory_uri().'/img/header.jpg');
-						echo '<img src="'.esc_url( $header_image ).'" class="img-responsive">';
-						?>
-					</div>
-				
-				<div class="row menucont">
-					<div class="cont">
-						<?php get_template_part( 'inc/contact' ); ?>
-					</div>
-					<div class="search">
-						<?php get_search_form( ); ?>
-					</div>
+		<div class="header">
+			<!-- Картинка шапки  -->
+		</div>
+		<div class="wrapper">
+		<div class="table">
+			<div class="table-row">
+			<div class="table-cell">
+				<div class="searchimg">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/search.png" alt="Эко ферма поиск" />
+
 				</div>
-		
-				<div class="menutop" >
-					
-					<?php
+				<div class="search">
+					<?php 
+
+					get_search_form( );
+					?>
+				</div>
+			</div>
+				
+			</div>
+			
+			<div class="table-row">
+			
+			<div class="divmenu table-cell" >
+
+				<?php
 				$args = array( // Выводим верхнее меню
 					'theme_location'=>'top',
-					'container_class'=> 'divmenu',
+					'container_class'=> '',
 					'menu_class' 	=> 'menuleft',
 					'menu_id' 			=> 's',
 					'depth'=> '2',

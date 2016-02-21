@@ -43,7 +43,7 @@ function cwp_review_meta_boxes(){
     endforeach;
     wp_reset_postdata();
     
-    $p_meta = get_post_meta ($wppr_id);
+    $p_meta = isset($wppr_id ) ? get_post_meta ($wppr_id) : array();
 
     if (isset( $cwp_review_stored_meta['cwp_image_link'][0])) {
         $checkset = esc_attr( $cwp_review_stored_meta['cwp_image_link'][0]);
@@ -72,6 +72,12 @@ function cwp_review_meta_boxes(){
     <div class="review-settings-group">
         <div class="review-settings-group-option">
             <ul>
+                <?php
+                    // Added by Ash/Upwork
+                    do_action("wppr-amazon-addfields", $cwp_review_stored_meta);
+                    // Added by Ash/Upwork
+                ?>
+
                 <li>
                     <label for="cwp_rev_product_name"><?php  _e("Product Name", "cwppos"); ?></label>
                     <input type="text" name="cwp_rev_product_name" id="cwp_rev_product_name" value="<?php
@@ -117,7 +123,8 @@ function cwp_review_meta_boxes(){
                     }
 
                     ?>"/>
-                    <?php 
+                    <?php
+                    $hide_button2 = false;
                     if (!isset($cwp_review_stored_meta['cwp_product_affiliate_text2'][0])) {
                         $hide_button2 = true;
                         ?>
@@ -268,6 +275,10 @@ function cwp_review_meta_boxes_save($post_id){
     if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
         return;
     }
+
+    // Added by Ash/Upwork
+    do_action("wppr-amazon-savefields", $post_id);
+    // Added by Ash/Upwork
 
     if( isset( $_POST[ 'cwp_meta_box_check' ] ) && $_POST[ 'cwp_meta_box_check' ]=="Yes") {
 

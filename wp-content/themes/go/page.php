@@ -8,19 +8,17 @@
  */
 get_header(); // Подключаем хедер?>
  
-<div class="centeritem" >
+<div class="centeritem table-cell" >
 		<?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
-		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1><!-- Заголовок поста + ссылка на него -->
+		<h1 ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1><!-- Заголовок поста + ссылка на него -->
 		<hr>
-		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } // Проверяем наличие миниатюры, если есть показываем ?>
+		 
 		<?php the_content(''); // Выводим анонс ?>
 		<?php endwhile; // Конец цикла.
 else: echo '<h2>Извините, ничего не найдено...</h2>'; endif; // Если записей нет - извиняемся ?>  
 <?php if (comments_open()) { ?>
 <?php comments_template(); ?>
 <?php } ?>
-</div>
-</div>
-</div>  
+</div> 
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

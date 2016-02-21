@@ -41,4 +41,35 @@ jQuery(document).ready(function($) {
 		});
 		return false;
 	});
+
+/*	$('.prodaj').mouseover(function() {
+		$(this).addClass('jello');
+
+	});
+	$('.prodaj').mouseout(function(event) {
+		$(this).removeClass('jello');
+	});
+*/
+
+/*	setInterval(function(){
+	
+		if ($('.prodaj').hasClass('swing'))
+		{
+		    $('.prodaj').removeClass('swing');
+		
+		} else {
+		     $('.prodaj').addClass('swing');
+		}
+		
+	},1000);*/
+
+	var link = window.location.href;
+	console.log(link);
+	
+	$('.sub-menu li a[href="'+link+'"]').addClass('act');
+
+
+	
+	 
+
 });
