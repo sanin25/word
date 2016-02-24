@@ -10,9 +10,8 @@
 /*Подключаем меню*/
 add_action('after_setup_theme', function(){
 	register_nav_menus( array(
-		'top' => 'Верхнее меню',
-		'left' => 'Нижнее',
-        'sale' => 'Продажа'
+		'left' => 'Левое меню',
+		'right' => 'Правое меню'
 	) );
 });
 add_theme_support('post-thumbnails'); // Включаем поддержку миниатюр
@@ -46,6 +45,14 @@ add_action( 'widgets_init', 'true_register_wp_sidebars' );
     }
     
     add_action('wp_enqueue_scripts', 'register_my_script');
+
+    function register_my_sc()
+    {
+     wp_enqueue_script( 'my-sc', get_template_directory_uri().'/js/jquery.fittext.js',array('jquery'));
+    }
+    
+    add_action('wp_enqueue_scripts', 'register_my_sc');
+
 
 
 /*Подключаю css стили */
@@ -81,5 +88,8 @@ function register_mystyle()
     }
     add_action('wp_ajax_my_mail', 'my_mail_callback');
 	add_action('wp_ajax_nopriv_my_mail', 'my_mail_callback');
+
+
+
      
 ?>

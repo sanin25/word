@@ -38,3 +38,4 @@ echo paginate_links( array(
 </div>
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>
+?>

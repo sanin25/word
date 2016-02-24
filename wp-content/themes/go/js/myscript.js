@@ -62,11 +62,15 @@ jQuery(document).ready(function($) {
 		}
 		
 	},1000);*/
-
+   /*Добавляем класс для фото*/
+   $("img").addClass('responsive-img');
+    /*Активное меню*/
 	var link = window.location.href;
 	console.log(link);
 	
 	$('.sub-menu li a[href="'+link+'"]').addClass('act');
+	/*Конец Акт меню*/
+	$(".retxt").fitText(1.2, { minFontSize: '9px', maxFontSize: '13px' })
 
 
 	

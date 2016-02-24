@@ -44,38 +44,29 @@ if ( $paged >= 2 || $page >= 2 )
 	?>
 </head>
 <body>
-	<div class="shell">
-		
+		<div class="table">
 		<div class="header">
 			<!-- Картинка шапки  -->
 		</div>
-		<div class="wrapper">
-		<div class="table">
-			<div class="table-row">
-			<div class="table-cell">
-				<div class="searchimg">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/search.png" alt="Эко ферма поиск" />
-
-				</div>
-				<div class="search">
-					<?php 
-
-					get_search_form( );
-					?>
-				</div>
-			</div>
-				
-			</div>
+		<div class="wrapper clearfix">
 			
 			<div class="table-row">
-			
-			<div class="divmenu table-cell" >
+			<div class="table-cell-1">
+				<div class="searchimg ">
+					 
+						<?php 
+
+						get_search_form( );
+						?>
+					 
+				</div>
+			<div class="menuleft clearfix retxt" >
 
 				<?php
 				$args = array( // Выводим верхнее меню
-					'theme_location'=>'top',
+					'theme_location'=>'left',
 					'container_class'=> '',
-					'menu_class' 	=> 'menuleft',
+					'menu_class' 	=> 'divmenu',
 					'menu_id' 			=> 's',
 					'depth'=> '2',
 					'fallback_cb' => '',
@@ -83,4 +74,8 @@ if ( $paged >= 2 || $page >= 2 )
 					);
 				wp_nav_menu($args);
 				?>
+				<div class="cont ">
+					<?php get_template_part( 'inc/contact' ); ?>
+				</div>
+			</div>
 			</div>
