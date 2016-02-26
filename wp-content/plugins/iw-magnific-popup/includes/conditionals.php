@@ -2,7 +2,7 @@
 	
 $iwmp_options = get_option('iwmp_settings');	
 
-if ( $iwmp_options['iwmp_single_images'] == '0' ) {
+if ( $iwmp_options['iwmp_single_images'] == '1' ) {
 	
 	function iwmp_add_single_script() { ?>
 	

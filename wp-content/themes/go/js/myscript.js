@@ -8,10 +8,26 @@ jQuery(document).ready(function($) {
 		$(this).css({"background-color": "yellow", "font-size": "200%"});
 	});
 
+	$('.gallery-icon  img').magnificPopup({
+	  type:'image',
+	  callbacks: {
+	    elementParse: function(item) {
+	      // Function will fire for each target element
+	      // "item.el" is a target DOM element (if present)
+	      // "item.src" is a source that you may modify
+
+	      console.log(item); // Do whatever you want with "item" object
+	    }
+	  }
+	});
+
+/*Вызоа вормы отправки письма*/
 	$('#poch').magnificPopup({
 		type: 'inline',
-		preloader: false,
+		preloader: true,
 		focus: '#name',
+
+
 
 		// When elemened is focused, some mobile browsers in some cases zoom in
 		// It looks not nice, so we disable it:
@@ -25,7 +41,7 @@ jQuery(document).ready(function($) {
 			}
 		}
 	});
-	
+	/*Обработка формы отправки письма*/
 	$("#form").submit(function() {
 		var mail = {
 			action : 'my_mail'
@@ -68,7 +84,7 @@ jQuery(document).ready(function($) {
 	var link = window.location.href;
 	console.log(link);
 	
-	$('.sub-menu li a[href="'+link+'"]').addClass('act');
+	$('.sub-menu li a[href="'+link+'"],.menu-item a[href="'+link+'"] ').addClass('act').removeAttr("href");
 	/*Конец Акт меню*/
 	$(".retxt").fitText(1.2, { minFontSize: '9px', maxFontSize: '13px' })
 

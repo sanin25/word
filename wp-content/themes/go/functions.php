@@ -90,6 +90,31 @@ function register_mystyle()
 	add_action('wp_ajax_nopriv_my_mail', 'my_mail_callback');
 
 
+    function mayak_segment_length ($length) {
+        return 40;
+        }
+        function mayak_segment_more($more) {
+        return '...';
+        }
+
+        function mayak_announcement($length_callback='', $more_callback='') {
+           global $post;
+           add_filter('excerpt_length', $length_callback);
+           add_filter('excerpt_more', $more_callback);
+             $output = get_the_excerpt();
+             $output = apply_filters('wptexturize', $output);
+             $output = apply_filters('convert_chars', $output);
+             $output = ''.$output.'';
+        echo $output;
+        }
+
+        function mayak_page_menu_no_link($no_link){
+        $gg_mk = '!<li class="(.*?)current-menu-item"><a(.*?)>(.*?)</a>!si';
+        $dd_mk = '<li class="$1current-menu-item">$3';
+        return preg_replace($gg_mk, $dd_mk, $no_link );
+        }
+        add_filter('wp_page_menu', 'mayak_page_menu_no_link');
+
 
      
 ?>

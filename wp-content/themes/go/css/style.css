@@ -357,11 +357,12 @@ li#menu-item-13 > a:hover{
 .act{
 
 	color: green!important;
+        background: rgba(58, 97, 26, 0.48);
 
 }
 
 .centeritem{
-	    width: 100%
+	    width: 98%;
 	    padding: 30px;
 	    margin: 20px 20px 0px 10px;
 	    background: #fff;
@@ -511,10 +512,16 @@ margin: 0 auto; /* внешние отступы сверху и снизу, а 
 }
 .katalog li{ /* стили для элементов списка */
 float: left; /* миниатюры располагаются слева от соседней */
-height: 150px; /* высота ячейки с миниатюрой и заголовком */
-width: 120px; /* ширина ячейки */
-margin: 5px 10px 0 0; /* внешние отступы сверху и справа от ячейки */
+float: left;
+margin: 50px 10px 0px 0;
+overflow: hidden;
+background: white;
+padding: 60px;
+border: 1px dotted green;
 overflow:hidden; /* скрываем все что не поместилось в ячейку */
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
 }
 
 #interesting_articles{
@@ -572,7 +579,7 @@ position: relative;
 .imgpost img{
 	border: 3px solid silver;
 	outline: 0.1em solid #a3a2d1;
-	outline-offset: 0.5em
+	outline-offset: 0.5em;
 	min-width: 100px;
 	max-width: 150px;
 	-moz-transition: all 1s ease-out;
@@ -600,4 +607,32 @@ background-color:#345;
   -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=75)';
   position: absolute;
   bottom: 10px; left: 10px; right: 10px;
+}
+#category h1{
+	color: rgba(55, 158, 4, 0.72);
+	text-align: center;
+	font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 140%;
+	
+}
+#category h2{
+    color: rgba(55, 158, 4, 0.72);
+    margin: 0 0 0 -28px;
+    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 140%;
+    border-bottom: 2px solid red;
+}
+.hr {
+		width: 100%;
+	    margin-left: 30%;
+	    border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
