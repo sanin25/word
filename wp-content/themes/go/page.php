@@ -9,6 +9,21 @@
 get_header(); // Подключаем хедер?>
  
 <div class="table-cell">
+<div class="menuleft clearfix retxt" >
+
+	<?php
+	$args = array( // Выводим верхнее меню
+		'theme_location'=>'left',
+		'container_class'=> '',
+		'menu_class' 	=> 'divmenu',
+		'menu_id' 			=> 's',
+		'depth'=> '2',
+		'fallback_cb' => '',
+		'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
+		);
+	wp_nav_menu($args);
+	?>
+</div>
 <div class="centeritem clearfix" >
 		<?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
 		<h1 ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1><!-- Заголовок поста + ссылка на него -->

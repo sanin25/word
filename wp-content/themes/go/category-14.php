@@ -30,9 +30,10 @@ wp_nav_menu($args);
 							<br/>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(80,70));?></a>
 								<?php
-								mayak_announcement('mayak_segment_length','mayak_segment_more'); 
+									announcement('segment_length','segment_more'); 
 								?>
-								<a href="<?php the_permalink(); ?>"><span class="mayak-more">
+								<a href="<?php the_permalink(); ?>">
+								<span class="more">
 									Читать полностью »
 								</span>
 							</a>

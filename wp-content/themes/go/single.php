@@ -8,35 +8,29 @@
  */
 get_header(); // Подключаем хедер?> 
 <div class="table-cell">
-<div class="menutop menuright clearfix"  id="fittext3">
 
-	<?php
-	$args = array( // Выводим верхнее меню
-		'theme_location'=>'right',
-		'container_class'=> '',
-		'menu_class' 	=> 'divmenu',
-		'menu_id' 			=> 'topmenu',
-		'depth'=> '2',
-		'fallback_cb' => '',
-		'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
-		);
-	wp_nav_menu($args);
-	?>
-</div>
+			<div class="menuleft clearfix retxt" >
+
+				<?php
+				$args = array( // Выводим верхнее меню
+					'theme_location'=>'left',
+					'container_class'=> '',
+					'menu_class' 	=> 'divmenu',
+					'menu_id' 			=> 's',
+					'depth'=> '2',
+					'fallback_cb' => '',
+					'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
+					);
+				wp_nav_menu($args);
+				?>
+			</div>
 <div class="centeritem clearfix" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
 	<div class="sotset">	
-		<!-- Put this script tag to the <head> of your page -->
-		<script type="text/javascript" src="http://vk.com/js/api/share.js?93" charset="windows-1251"></script>
-
-		<!-- Put this script tag to the place, where the Share button will be -->
-		<script type="text/javascript"><!--
-		document.write(VK.Share.button(false,{type: "round_nocount", text: "Сохранить"}));
-		--></script>
-
+		
 	</div>
 <h1 ><?php the_title();// Заголовок ?></h1>
-<hr class="hr">
+<hr>
  <?php the_content(); // Содержимое страницы ?>
 <?php echo 'Рубрики: '; the_category( ' | ' ); // Выводим категории поста ?>
 <?php the_tags( 'Тэги: ', ' | ', '' ); // Выводим тэги(метки) поста ?>
@@ -92,6 +86,35 @@ wp_reset_query();
 <?php } ?>
 </div>
 </div>
+<!--Конец table-cell-->
+<div class="table-cell-1">
+	<div class="searchimg ">
+						 
+			<?php 
+
+			get_search_form( );
+			?>
+						 
+	</div>
+<div class="menutop menuright clearfix"  id="fittext3">
+
+	<?php
+	$args = array( // Выводим верхнее меню
+		'theme_location'=>'right',
+		'container_class'=> '',
+		'menu_class' 	=> 'divmenu',
+		'menu_id' 			=> 'topmenu',
+		'depth'=> '2',
+		'fallback_cb' => '',
+		'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
+		);
+	wp_nav_menu($args);
+	?>
 </div>
+<div class="cont ">
+					<?php get_template_part( 'inc/contact' ); ?>
+				</div>
+</div>
+
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

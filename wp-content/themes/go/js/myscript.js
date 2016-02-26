@@ -84,9 +84,15 @@ jQuery(document).ready(function($) {
 	var link = window.location.href;
 	console.log(link);
 	
-	$('.sub-menu li a[href="'+link+'"],.menu-item a[href="'+link+'"] ').addClass('act').removeAttr("href");
+	$('.sub-menu li a[href="'+link+'"],.menu-item > a[href="'+link+'"] ').addClass('act').removeAttr("href");
 	/*Конец Акт меню*/
-	$(".retxt").fitText(1.2, { minFontSize: '9px', maxFontSize: '13px' })
+
+	  
+	  $('#s > li').hover(function() {
+	    $(this).find('.sub-menu').stop(true, true).delay(200).fadeIn();
+	}, function() {
+	    $(this).find('.sub-menu').stop(true, true).delay(200).fadeOut();
+	})
 
 
 	

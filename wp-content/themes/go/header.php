@@ -51,31 +51,5 @@ if ( $paged >= 2 || $page >= 2 )
 		<div class="wrapper clearfix">
 			
 			<div class="table-row">
-			<div class="table-cell-1">
-				<div class="searchimg ">
-					 
-						<?php 
-
-						get_search_form( );
-						?>
-					 
-				</div>
-			<div class="menuleft clearfix retxt" >
-
-				<?php
-				$args = array( // Выводим верхнее меню
-					'theme_location'=>'left',
-					'container_class'=> '',
-					'menu_class' 	=> 'divmenu',
-					'menu_id' 			=> 's',
-					'depth'=> '2',
-					'fallback_cb' => '',
-					'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
-					);
-				wp_nav_menu($args);
-				?>
-				<div class="cont ">
-					<?php get_template_part( 'inc/contact' ); ?>
-				</div>
-			</div>
-			</div>
+		
+			
