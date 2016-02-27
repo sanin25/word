@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic);
+
 @media screen and (max-width:987px){
+	body{
+		font-style: 12px !important;
+	}
 
 #gallery-2 img{
 		max-width: 100px !important;
@@ -22,7 +26,7 @@
 }
   
 
-body {
+body{
 	font-size: 16px;
 }
 .responsive-img{
@@ -39,6 +43,10 @@ body {
 }
 .table-row{
 	display: table-row;
+	width: 98%;
+	min-width: 780px;
+	max-width: 1324px;
+	margin: 0 auto;
 }
 .table-cell{
 	display: table-cell;
@@ -72,16 +80,6 @@ body {
    display: block;
    word-spacing: 99in;
    overflow: hidden; /*IE8-*/
-}
-.shell{
-	 	font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-	    font-weight: normal;
-	    font-style: normal;
-	    text-align: justify;
-	    position: relative;
-	    width: 100%;
-	    min-height: 100%;
-	    background-size: 100%;
 }
 
 .wrapper{
@@ -224,14 +222,14 @@ ul#s > li {
 	 float: left;
 	 text-align: center;
 	 position: relative;
-	 padding-top: 12px;
+	 padding: 12px 0 8px 0;
 
 }
 
 ul#s > li > a{
 	padding: 5px 10px 5px 10px;
 	letter-spacing: 0.2px;
-	font-size: 20px;
+	font-size: 120%;
 	font-family: 'Marck Script', serif;
 	font-weight: bold;
 	color: #60903B;
@@ -397,7 +395,7 @@ ul#s > li a:hover {
 }
 .cont ul p{
 	text-align: center;
-	font-size: 32px;
+	font-size: 200%;
 	font-family: 'Marck Script', serif;
 	font-weight: 500;
 	color: #0000EE;
@@ -408,7 +406,7 @@ ul#s > li a:hover {
 }
 .letter p{
     text-align: center;
-    font-size: 24px;
+    font-size: 160%;
     font-family: 'Marck Script', serif;
     font-weight: 500;
     color: #0000EE;
@@ -434,12 +432,12 @@ ul#s > li a:hover {
 	color: #615FB9;
 }
 #fecbook i{
-	color::#336699;
+	color:#336699;
 }
 textarea {
     width: 90%;
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 90%;
     color: #444;
     padding: 5px;
 }
@@ -450,7 +448,6 @@ margin: 0 auto; /* внешние отступы сверху и снизу, а 
 }
 .katalog li{ /* стили для элементов списка */
 float: left; /* миниатюры располагаются слева от соседней */
-float: left;
 margin: 50px 10px 0px 0;
 overflow: hidden;
 background: white;
@@ -486,7 +483,7 @@ border-radius: 10px 10px 10px 10px;
 	left: -14.5px;
 	z-index: 5;
 	padding: 12px;
-	font-size: 19px;
+	font-size: 120%;
 	font-family: 'Marck Script', cursive;
 	color:rgb(1, 11, 60);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0.1, Direction=90, Color=#ffffff)";/*IE 8*/
@@ -538,7 +535,7 @@ background-color:#345;
   display: block;
   margin: 0;
   color: #FFF;
-  font-size: 12px;
+  font-size: 80%;
   padding: 10px;
   filter:alpha(opacity=75);
   opacity:.75;
@@ -546,7 +543,10 @@ background-color:#345;
   position: absolute;
   bottom: 10px; left: 10px; right: 10px;
 }
-#category h1{
+.katalog {
+	position: relative;
+}
+.katalog h1{
 	color: rgba(55, 158, 4, 0.72);
 	text-align: center;
 	padding: 2px 0 0 0;
@@ -556,14 +556,14 @@ background-color:#345;
 	font-size: 190%;
 	
 }
-#category h2{
+.katalog h2{
     color: rgba(55, 158, 4, 0.72);
     margin: 0 0 0 -28px;
     font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
     font-weight: bold;
     font-style: normal;
-    font-size: 140%;
-    border-bottom: 2px solid red;
+    font-size: 160%;
+    border-bottom: 1px solid #2A5228;
 }
 .hr {
 		width: 100%;
@@ -573,4 +573,27 @@ background-color:#345;
 		background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 		background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 		background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+.more{
+		display: block;
+		padding: 11px 11px 0 11px;
+		width: 231px;
+		margin: 7px 0 0 61px;
+		border-bottom: 2px inset #ABDE9A;
+		color: #486738;
+		font-weight: 600;
+		position: relative;
+		bottom: -35px;
+		left: 530px;
+		font-size: 100%;
+}
+
+.fa-hand-o-right{
+	float: left;
+    margin: 20px;
+    font-size: 160%;
+    position: relative;
+    top: 39px;
+    left: 527px;
+    color: #8D2DB3;
 }

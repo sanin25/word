@@ -87,13 +87,7 @@ jQuery(document).ready(function($) {
 	$('.sub-menu li a[href="'+link+'"],.menu-item > a[href="'+link+'"] ').addClass('act').removeAttr("href");
 	/*Конец Акт меню*/
 
-	  
-	  $('#s > li').hover(function() {
-	    $(this).find('.sub-menu').stop(true, true).delay(200).fadeIn();
-	}, function() {
-	    $(this).find('.sub-menu').stop(true, true).delay(200).fadeOut();
-	})
-
+	
 
 	
 	 

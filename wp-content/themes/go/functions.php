@@ -103,6 +103,9 @@ function register_mystyle()
         function segment_more($more) {
         return '...';
         }
+        function segment_lengthtow ($lengt) {
+        return 6;
+        }
 
         function announcement($length_callback='', $more_callback='') {
            global $post;
