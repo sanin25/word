@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic);
 
 @media screen and (max-width:987px){
@@ -444,19 +444,63 @@ textarea {
 /* Категория */
 .katalog { /* общие стили для блока */
 width: 99%; /* общая ширина блока */
-margin: 0 auto; /* внешние отступы сверху и снизу, а также выравнивание по центру */
+margin: 0 auto;
 }
 .katalog li{ /* стили для элементов списка */
 float: left; /* миниатюры располагаются слева от соседней */
 margin: 50px 10px 0px 0;
 overflow: hidden;
-background: white;
+background: #E6E6E6;
 padding: 60px;
 border: 1px dotted green;
 overflow:hidden; /* скрываем все что не поместилось в ячейку */
 border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
+position: relative;
+}
+.katalog h1{
+	color: rgb(0, 42, 0);
+	text-align: center;
+	padding: 2px 0 0 0;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 190%;
+
+	
+}
+.katalog h2{
+    color: rgba(55, 158, 4, 0.72);
+    margin: 0 0 0 -28px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 160%;
+    border-bottom: 1px solid #2A5228;
+}
+.more{
+	display: block;
+	padding: 11px 11px 0 11px;
+	width: 231px;
+	margin: 7px 0 0 61px;
+	color: #486738;
+	font-weight: 600;
+	position: relative;
+	float: right;
+	font-size: 100%;
+}
+
+.more i{
+	float: left;
+	font-size: 160%;
+	position: relative;
+	top: 45px;
+	left: -44px;
+	color: #8D2DB3;
+}
+.more:hover{
+	color: red !important;
 }
 
 #interesting_articles{
@@ -543,28 +587,6 @@ background-color:#345;
   position: absolute;
   bottom: 10px; left: 10px; right: 10px;
 }
-.katalog {
-	position: relative;
-}
-.katalog h1{
-	color: rgba(55, 158, 4, 0.72);
-	text-align: center;
-	padding: 2px 0 0 0;
-	font-family: 'Marck Script', Helvetica, Sans-Serif;
-	font-weight: bold;
-	font-style: normal;
-	font-size: 190%;
-	
-}
-.katalog h2{
-    color: rgba(55, 158, 4, 0.72);
-    margin: 0 0 0 -28px;
-    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 160%;
-    border-bottom: 1px solid #2A5228;
-}
 .hr {
 		width: 100%;
 		border: 0;
@@ -574,26 +596,15 @@ background-color:#345;
 		background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 		background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
-.more{
-		display: block;
-		padding: 11px 11px 0 11px;
-		width: 231px;
-		margin: 7px 0 0 61px;
-		border-bottom: 2px inset #ABDE9A;
-		color: #486738;
-		font-weight: 600;
-		position: relative;
-		bottom: -35px;
-		left: 530px;
-		font-size: 100%;
+.commentlist li {
+	padding: 60px;
 }
-
-.fa-hand-o-right{
-	float: left;
-    margin: 20px;
-    font-size: 160%;
-    position: relative;
-    top: 39px;
-    left: 527px;
-    color: #8D2DB3;
+.commentlist li:nth-child(odd){
+	background: #D8E2D7;
+}
+.children ul li:nth-child(odd){
+	background: red;
+}
+.commentlist .even{
+	background: yellow;
 }

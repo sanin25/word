@@ -10,19 +10,7 @@
 get_header(); // Подключаем хедер ?>
 <div class="table-cell">
     <div class="menuleft clearfix retxt" >
-
-        <?php
-        $args = array(// Выводим верхнее меню
-            'theme_location' => 'left',
-            'container_class' => '',
-            'menu_class' => 'divmenu',
-            'menu_id' => 's',
-            'depth' => '2',
-            'fallback_cb' => '',
-            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-        );
-        wp_nav_menu($args);
-        ?>
+		<?php get_my_menu_left(); ?>
     </div>
 <div class="centeritem clearfix" >
 <div class="gatpost">
@@ -39,8 +27,10 @@ get_header(); // Подключаем хедер ?>
 								?>
 								<a href="<?php the_permalink(); ?>">
 								<br/>
+								<div class="more">
 								<i class="fa fa-hand-o-right"></i> 
 								<span class="more">Читать полностью »</span>
+								</div>
 							</a>
 							<br/>
 						</li>
@@ -73,19 +63,7 @@ echo paginate_links( array(
 
     </div>
     <div class="menutop menuright clearfix"  id="fittext3">
-
-        <?php
-        $args = array(// Выводим верхнее меню
-            'theme_location' => 'right',
-            'container_class' => '',
-            'menu_class' => 'divmenu',
-            'menu_id' => 'topmenu',
-            'depth' => '2',
-            'fallback_cb' => '',
-            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-        );
-        wp_nav_menu($args);
-        ?>
+			<?php  get_my_menu_right();?>
     </div>
     <div class="cont ">
         <?php get_template_part('inc/contact'); ?>

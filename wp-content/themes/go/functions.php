@@ -107,15 +107,40 @@ function register_mystyle()
         return 6;
         }
 
-        function announcement($length_callback='', $more_callback='') {
+        function announcement($length, $more='') {
            global $post;
-           add_filter('excerpt_length', $length_callback);
-           add_filter('excerpt_more', $more_callback);
+           add_filter('excerpt_length', $length_);
+           add_filter('excerpt_more', $more);
              $output = get_the_excerpt();
              $output = apply_filters('wptexturize', $output);
              $output = apply_filters('convert_chars', $output);
              $output = ''.$output.'';
         echo $output;
         }
-    
+         /*Меню*/
+        function get_my_menu_left(){
+            $args = array(// Выводим верхнее меню
+                'theme_location' => 'left',
+                'container_class' => '',
+                'menu_class' => 'divmenu',
+                'menu_id' => 's',
+                'depth' => '2',
+                'fallback_cb' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+            );
+            wp_nav_menu($args);
+        }
+
+        function get_my_menu_right(){
+            $args = array(// Выводим верхнее меню
+                'theme_location' => 'right',
+                'container_class' => '',
+                'menu_class' => 'divmenu',
+                'menu_id' => 'topmenu',
+                'depth' => '2',
+                'fallback_cb' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+            );
+            wp_nav_menu($args);
+        }
 ?>

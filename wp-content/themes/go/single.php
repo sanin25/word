@@ -88,32 +88,29 @@ wp_reset_query();
 </div>
 <!--Конец table-cell-->
 <div class="table-cell-1">
-	<div class="searchimg ">
-						 
-			<?php 
-
-			get_search_form( );
-			?>
-						 
+    <div class="searchimg ">
+		<?php get_search_form(); ?>
 	</div>
-<div class="menutop menuright clearfix"  id="fittext3">
-
-	<?php
-	$args = array( // Выводим верхнее меню
-		'theme_location'=>'right',
-		'container_class'=> '',
-		'menu_class' 	=> 'divmenu',
-		'menu_id' 			=> 'topmenu',
-		'depth'=> '2',
-		'fallback_cb' => '',
-		'items_wrap'	=>	'<ul id="%1$s" class="%2$s">%3$s</ul>'
-		);
-	wp_nav_menu($args);
-	?>
-</div>
-<div class="cont ">
-					<?php get_template_part( 'inc/contact' ); ?>
-				</div>
+    <div class="menutop menuright clearfix"  id="fittext3">
+			<?php  get_my_menu_right();?>
+    </div>
+    <div class="cont ">
+        <?php get_template_part('inc/contact'); ?>
+    </div>
+    <div class="newpost">
+    <p>Последнее на сайте</p>
+    	 <ul>
+    	<?php $the_query = new WP_Query( 'showposts=3' ); ?>
+		<li>
+    	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+    		<h2><?php the_title(); ?></h2>
+    	<?php
+    	  announcement('segment_lengthtow','segment_more'); 
+    	?>
+    	</li>
+    	<?php endwhile;?>
+    	</ul>
+    </div>
 </div>
 
 <?php get_sidebar(); // Подключаем сайдбар ?>
