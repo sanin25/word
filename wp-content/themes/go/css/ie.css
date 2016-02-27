@@ -1,0 +1,10 @@
+body {
+    background: blue !important;
+    color: red;
+}
+.act{
+    color: red!important;
+}
+ul#s > li a:hover {
+    color: blue;
+}

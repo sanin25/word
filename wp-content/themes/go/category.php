@@ -9,6 +9,21 @@
 
 get_header(); // Подключаем хедер ?>
 <div class="table-cell">
+    <div class="menuleft clearfix retxt" >
+
+        <?php
+        $args = array(// Выводим верхнее меню
+            'theme_location' => 'left',
+            'container_class' => '',
+            'menu_class' => 'divmenu',
+            'menu_id' => 's',
+            'depth' => '2',
+            'fallback_cb' => '',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+        );
+        wp_nav_menu($args);
+        ?>
+    </div>
 <div class="centeritem clearfix" >
 <div id="category">
 <h1><?php wp_title(''); // Заголовок категории ?></h1>
@@ -49,6 +64,34 @@ echo paginate_links( array(
 ?>
 </div>
 </div>
+</div>
+</div>
+<div class="table-cell-1">
+    <div class="searchimg ">
+
+        <?php
+        get_search_form();
+        ?>
+
+    </div>
+    <div class="menutop menuright clearfix"  id="fittext3">
+
+        <?php
+        $args = array(// Выводим верхнее меню
+            'theme_location' => 'right',
+            'container_class' => '',
+            'menu_class' => 'divmenu',
+            'menu_id' => 'topmenu',
+            'depth' => '2',
+            'fallback_cb' => '',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+        );
+        wp_nav_menu($args);
+        ?>
+    </div>
+    <div class="cont ">
+        <?php get_template_part('inc/contact'); ?>
+    </div>
 </div>
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

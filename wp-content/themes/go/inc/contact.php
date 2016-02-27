@@ -9,11 +9,21 @@
 ?>
 
 	<img src="<?php echo get_stylesheet_directory_uri() ?>/img/cont.gif" alt="">
+	<hr class="hr">
+	<div class="letter">
+	<p>Написать письмо</p>
+	<a href="#form" id="poch"></a>
+	</div>
+	<hr class="hr">
 	<ul>
-	<li><a href="http://vk.com/id24463375" target="_blank" id="vk"><i class="fa fa-vk fa-3x"></i> </a></li>
-	<li><a href="#form" id="poch"><i class="fa fa-edge fa-3x "></i></a></li>
-	<li><a href="http://ok.ru/profile/577599209772" target="_blank" id="ok"><i class="fa fa-odnoklassniki fa-3x fa-spin "></i></a></li>
+	<p>соцсети</p>
+	<li><a href="http://vk.com/id24463375" target="_blank" id="vk"><i class="fa fa-vk fa-2x"></i> </a></li>
+	<li><a href="http://vk.com/id24463375" target="_blank" id="fecbook"><i class="fa fa-facebook-official fa-2x"></i> </a></li>
+	<li><a href="http://ok.ru/profile/577599209772"  id="ok" target="_blank" id="ok"><i class="fa fa-odnoklassniki fa-2x fa-spin "></i>
+	</a>
+	</li>
 	</ul>
+	<hr class="hr">
 
 <!-- Форма отправки почты -->
 <div class="hidden semdmail">

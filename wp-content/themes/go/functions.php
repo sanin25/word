@@ -67,6 +67,13 @@ function register_mystyle()
     }
     add_action('wp_enqueue_scripts', 'register_mystyle');
 
+    function register_ie()
+        {
+         wp_enqueue_style( 'my-ie', get_stylesheet_directory_uri().'/css/ie.css');
+         wp_style_add_data( 'my-ie', 'conditional', 'lt IE 10' );
+        }
+        add_action('wp_enqueue_scripts', 'register_ie');
+
     /*ajax запросы*/
     
     function my_mail_callback(){

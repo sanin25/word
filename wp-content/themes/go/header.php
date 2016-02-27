@@ -20,12 +20,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 3.0, user-scalable = yes, width = device-width">
-
-	
+     
 
 
  <!--[if lt IE 9]>
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+ </script>
  <![endif]-->
  <title>
 <?php // Генерируем тайтл в зависимости от контента с разделителем " | "
