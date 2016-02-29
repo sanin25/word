@@ -32,11 +32,12 @@ get_header(); // Подключаем хедер?>
 <h1 ><?php the_title();// Заголовок ?></h1>
 <hr>
  <?php the_content(); // Содержимое страницы ?>
-<?php echo 'Рубрики: '; the_category( ' | ' ); // Выводим категории поста ?>
-<?php the_tags( 'Тэги: ', ' | ', '' ); // Выводим тэги(метки) поста ?>
+ <!-- Хлебный крошки -->
+ <br/>
+<?php if ( function_exists('yoast_breadcrumb') ) 
+{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+<br/>
 <?php endwhile; // Конец цикла ?>
-<?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); // Ссылка на предидущий пост?>
-<?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); // Ссылка на следующий пост?> 
 <hr>
 <div id="interesting_articles">
 <div class="inteimg">
@@ -82,7 +83,7 @@ wp_reset_query();
 ?>
 </div>
 <?php if (comments_open()) { ?>
-<?php comments_template(); ?>
+<?php comments_template('/comments.php'); ?>
 <?php } ?>
 </div>
 </div>

@@ -28,6 +28,10 @@
 
 body{
 	font-size: 16px;
+	font-style: 'Comfortaa';
+}
+a{
+	color: blue;
 }
 .responsive-img{
 	 width: 100%;
@@ -508,7 +512,7 @@ position: relative;
  margin: 10px 0;   /*  Отступы от верхнего и нижнего края */
  float: left;     /* Прижимаем блок к левому краю */
  width: 100%;  /* Длина блока соответствует ширине страницы */
- background: silver;
+ background: #E6E6E6;
  padding: 33px;
  border: 2px solid white;
 }
@@ -608,3 +612,20 @@ background-color:#345;
 .commentlist .even{
 	background: yellow;
 }
+#breadcrumbs{
+	background: #E6E6E6;
+}
+.breadcrumb_last{
+
+    color: #1F4613;
+    border: 1px solid;
+    padding: 5px;
+    background: #E4FADF;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+

@@ -143,4 +143,6 @@ function register_mystyle()
             );
             wp_nav_menu($args);
         }
+
+        
 ?>

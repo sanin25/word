@@ -56,12 +56,8 @@ echo paginate_links( array(
 </div>
 <div class="table-cell-1">
     <div class="searchimg ">
-
-        <?php
-        get_search_form();
-        ?>
-
-    </div>
+		<?php get_search_form(); ?>
+	</div>
     <div class="menutop menuright clearfix"  id="fittext3">
 			<?php  get_my_menu_right();?>
     </div>
