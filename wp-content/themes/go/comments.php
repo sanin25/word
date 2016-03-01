@@ -2,7 +2,6 @@
 /**
  * Чистый Шаблон для разработки
  * Шаблон вывода поста
- * http://dontforget.pro
  * @package WordPress
  * @subpackage clean
  */
@@ -36,18 +35,22 @@ function mytheme_comment($comment, $args, $depth){
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div class="comment_wrap" id="comment-<?php comment_ID(); ?>">
-     <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a>
-     <?php edit_comment_link(__('(Edit)'),'  ','') ?>
-        <?php echo get_avatar($comment,$size='64',$default='http://1.gravatar.com/avatar/df570c18646109a825ae4acc8d13712d?s=64&d=&r=G' ); ?>
-        <?php printf(__('<p class="author">%s</p>'), get_comment_author_link()) ?>
-       
-        <?php if ($comment->comment_approved == '0') { ?>
-        <em><?php _e('Your comment is awaiting moderation.') ?></em>
-        <br />
-        <?php }else{comment_text();} ?>
-        <div class="reply">
-            <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+         <div class="comearea">
+        <div class="comall">
+                <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a>
+               <?php echo get_avatar($comment,$size='64',$default='http://1.gravatar.com/avatar/df570c18646109a825ae4acc8d13712d?s=64&d=&r=G' ); ?>
+               <?php printf(__('<p class="author">%s</p>'), get_comment_author_link()) ?>
+               <div class="reply">
+                   <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?> <br/>  <?php edit_comment_link(__('(Edit)'),'  ','') ?>
+               </div>
         </div>
+            <div class="comtxt">
+                   <?php if ($comment->comment_approved == '0') { ?>
+               <em><?php _e('Your comment is awaiting moderation.') ?></em>
+               <br />
+               <?php }else{comment_text();} ?>
+            </div>
+         </div>
      </div>
 <?php
 }
