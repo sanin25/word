@@ -39,8 +39,51 @@ a{
 	 width: auto; /* для ie 8 */
 	 display: block;
 }
+.container{
+	display: block;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+}
+.cont1{
+	background: red;
+	background: url(../img/cont1.jpg);
+	background-size: cover;
+	
+
+}
+.cont1 img{
+	text-align: center;
+	margin: 0 auto;
+	/* top: 50%; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.cont2{
+	background: red;
+	background: url(../img/cont2.jpg)0 0 repeat;
+	position: relative;
+}
+.foto { margin: 0 auto;
+    position: relative;
+    display: block;
+    top: 50%;
+    width: 150px;
+    -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px; }
+.foto img{
+	
+
+}
+.cont3{
+	background: url(../img/cont3.jpg);
+	background-size: cover;
+	position: relative;
+}
 .table{
-	display: table;
+    display: table;
     width: 100%;
     table-layout: fixed;
 
@@ -101,7 +144,8 @@ a{
 	margin-bottom: 50px;
 	position: relative;
 	cursor: auto;
-	width: 98%;
+	width: 89%;
+    margin-top:350px;
 	min-width: 780px;
 	max-width: 1324px;
 	 
@@ -109,22 +153,16 @@ a{
 }
 
 .header {
-		-webkit-border-radius: 0 0 10px 10px;
-	    -moz-border-radius: 0 0 10px 10px;
-	    border-radius: 0 0 10px 10px;
-	    -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
-	    -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
-	    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
 	    margin: 0 auto;
-	    height: 350px;
-	    background-image: url('../img/header.jpg');
-	    background-size: 100% 350px;
+	    height: 450px;
+	    background-image: url('../img/tr.png');
+	    background-size: 100% 349px;
 	    background-position: center top;
 	    background-repeat: no-repeat;
-	    position: relative;
-	   width: 98%;
+	   width: 100%;
 	   min-width: 780px;
-	   max-width: 1324px;
+	   max-width: 1524px;
+	   position: absolute;
 }
 
  .searchimg{
@@ -427,6 +465,7 @@ ul#s > li a:hover {
 	
         width: 100px;
         height: 100px;
+        -webkit-transform: scale(1.2);
 }
 	
 #ok i {
@@ -608,18 +647,18 @@ background-color:#345;
 .comall{
     float: left;
     width: 17%;
-    border: 1px solid green;
 }
 .comtxt{
-    border: 1px solid red;
     float: right;
     width: 82%;
    
 }
 .comment_wrap{
-    border: 2px solid;
     display: table;
     width: 100%;
+}
+.children{
+    background: #EAEBEA;
 }
 .comment_wrap p {
     padding: 0;
@@ -627,12 +666,7 @@ background-color:#345;
 .commentlist li:nth-child(odd){
 	background: #D8E2D7;
 }
-.children ul li:nth-child(odd){
-	background: red;
-}
-.commentlist .even{
-	background: yellow;
-}
+
 #breadcrumbs{
 	background: #E6E6E6;
 }

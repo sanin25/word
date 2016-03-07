@@ -1,13 +1,27 @@
 jQuery(document).ready(function($) {
-   /* $('body').tooltip({
-        selector: "[data-toggle]", // можете использовать любой селектор
-        placement: "top" 
-    });
-	*/
+  function setHeiHeight() {
+      $('.container').css({
+          height: $(window).height() + 'px'
+      });
+  }
+  setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
+  $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+
+
+  $(window).scroll(function() {
+  var par = $(this).scrollTop();
+  console.log(par);
+  $(".cont1 img").css({
+  	"transform" :"translate(0%"+ par +"%",
+  	"-webkit-transform" : "translate3d(0px," + par /4  + "%, .01px)",
+  });
+  });
+  
+
 	$("#vot").click(function() {
 		$(this).css({"background-color": "yellow", "font-size": "200%"});
 	});
-
+/*
 	$('.gallery-icon  img').magnificPopup({
 	  type:'image',
 	  callbacks: {
@@ -21,7 +35,7 @@ jQuery(document).ready(function($) {
 	  }
 	});
 
-/*Вызоа вормы отправки письма*/
+Вызоа вормы отправки письма
 	$('#poch').magnificPopup({
 		type: 'inline',
 		preloader: true,
@@ -40,7 +54,7 @@ jQuery(document).ready(function($) {
 				}
 			}
 		}
-	});
+	});*/
 	/*Обработка формы отправки письма*/
 	$("#form").submit(function() {
 		var mail = {

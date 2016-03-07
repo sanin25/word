@@ -51,7 +51,20 @@ add_action( 'widgets_init', 'true_register_wp_sidebars' );
      wp_enqueue_script( 'my-sc', get_template_directory_uri().'/js/jquery.fittext.js',array('jquery'));
     }
     
-    add_action('wp_enqueue_scripts', 'register_my_sc');
+    add_action('wp_enqueue_scripts', 'register_my_sc'); 
+     function register_my_bootstrap()
+    {
+     wp_enqueue_script( 'my-bootstrap', get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'));
+    }
+    
+    add_action('wp_enqueue_scripts', 'register_my_bootstrap');
+
+      function register_my_wow()
+    {
+     wp_enqueue_script( 'my-wow', get_template_directory_uri().'/js/wow.min.js',array('jquery'));
+    }
+    
+    add_action('wp_enqueue_scripts', 'register_my_wow');
 
 
 

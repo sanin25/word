@@ -47,6 +47,7 @@ wp_nav_menu($args);
 	</div>
 	<!--Тег вывода сайдбара-->
 </div>
+
 </div>
 </div>
 

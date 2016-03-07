@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 3.0, user-scalable = yes, width = device-width">
      
-
+<?php if (is_singular() AND comments_open() AND ( get_option('thread_comments') == 1)) wp_enqueue_script('comment-reply'); ?>
 
  <!--[if lt IE 9]>
  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -43,12 +43,5 @@ if ( $paged >= 2 || $page >= 2 )
 	?>
 </head>
 <body>
-		<div class="table">
-		<div class="header">
-			<!-- Картинка шапки  -->
-		</div>
-		<div class="wrapper clearfix">
-			
-			<div class="table-row">
-		
+
 			

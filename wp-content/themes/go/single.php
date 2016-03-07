@@ -98,20 +98,7 @@ wp_reset_query();
     <div class="cont ">
         <?php get_template_part('inc/contact'); ?>
     </div>
-    <div class="newpost">
-    <p>Последнее на сайте</p>
-    	 <ul>
-    	<?php $the_query = new WP_Query( 'showposts=3' ); ?>
-		<li>
-    	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-    		<h2><?php the_title(); ?></h2>
-    	<?php
-    	  announcement('segment_lengthtow','segment_more'); 
-    	?>
-    	</li>
-    	<?php endwhile;?>
-    	</ul>
-    </div>
+    
 </div>
 
 <?php get_sidebar(); // Подключаем сайдбар ?>

@@ -28,7 +28,7 @@
 <?php if ( have_comments() ) : ?>
 
     <h3 id="comments"><?php comments_number('Нет комментариев', '1 комментарий', '% коментариев' );?> к записи &#8220;<?php the_title(); ?>&#8221;</h3>
-
+             
 <?php
 
 function mytheme_comment($comment, $args, $depth){
@@ -41,7 +41,7 @@ function mytheme_comment($comment, $args, $depth){
                <?php echo get_avatar($comment,$size='64',$default='http://1.gravatar.com/avatar/df570c18646109a825ae4acc8d13712d?s=64&d=&r=G' ); ?>
                <?php printf(__('<p class="author">%s</p>'), get_comment_author_link()) ?>
                <div class="reply">
-                   <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?> <br/>  <?php edit_comment_link(__('(Edit)'),'  ','') ?>
+                   <?php comment_reply_link(array_merge( $args, array('reply_text' => 'Ответить', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?> <br/>  <?php edit_comment_link(__('(Edit)'),'  ','') ?>
                </div>
         </div>
             <div class="comtxt">
@@ -116,10 +116,10 @@ function mytheme_comment($comment, $args, $depth){
 </form>
 
 <?php endif; // If registration required and not logged in ?>
+        <?php echo get_ulogin_panel(); ?>
 </div>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
-
 <ol class="commentlist">
 <?php wp_list_comments(array('callback'=>'mytheme_comment')); ?>
 </ol>
